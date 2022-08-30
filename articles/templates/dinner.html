@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>저녁메뉴 고르기</h1>
+  <p>{{pick}} 은 {{pick|length}}글자</p>
+  <p>{{foods|join:", "}}</p>
+  <a href="{% url 'index' %}">뒤로</a>  <br>
+  <a href="{% url 'greeting' %}">환영 받으러 가기</a>
+  <hr>
+  <p>메뉴판</p>
+  <ul>
+    {% for food in foods %}
+      <li>{{food}}</li>
+    {% endfor %}
+  </ul>
+  {#  #}
+  {% comment "" %}{% endcomment %}
+</body>
+</html>
