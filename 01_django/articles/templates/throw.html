@@ -10,7 +10,7 @@
 <body>
   {% block content %}
   <h1>Throw</h1>
-  <form action="{% url 'catch' %}" method="GET">
+  <form action="{% url 'articles:catch' %}" method="GET">
     <label for="">Throw</label>
     <label for="message">message :</label>
     <input type="text" id="message" name="message">
