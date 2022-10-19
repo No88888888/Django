@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1>LOGIN</h1>
+    # 비로그인 상태에서 create 할때 로그인창으로 보내는데 거기서 next 파라미터에 담긴 url로 바로 보내주기 위해 url action을 삭제
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit">
+    </form>
+
+{% endblock content %}
+
