@@ -114,7 +114,9 @@ def comments_delete(request, article_pk, comment_pk):
 def likes(request, article_pk):
     if request.user.is_authenticated:
         article = Article.objects.get(pk=article_pk)
-
+        print(request.user)
+        print(request.user.pk)
+        print(article.like_users)
         # 좋아요 추가할지 취소할 지 무슨 기준으로 if문을 작성할까?
         # 현재 게시글에 좋아요를 누른 뒤 유저 목록에 현재 좋아요를 요청하는 유저가 있는지 없는지를 확인
         # if request.user in article.like_users.all():
